@@ -1,1 +1,37 @@
-<p>products works!</p>
+<div class="row py-5">
+    <div [ngClass]="isSidePanelVisible ? 'col-md-8' : 'col-md-12'">
+        <div class="card">
+            <div class="card-header d-flex bg-primary">
+                <div class="col-md-6">
+                    Product List
+                </div>
+                <div class="col-md-6 text-end">
+                    <button class="btn btn-sm btn-success" (click)="isSidePanelVisible = true">New</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4" *ngIf="isSidePanelVisible">
+        <div class="card">
+            <div class="card-header d-flex bg-primary">
+                <div class="col-md-6">
+                    New Product
+                </div>
+                <div class="col-md-6 text-end">
+                    <button class="btn btn-sm btn-success" (click)="isSidePanelVisible = false">Close</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+            </div>
+
+        </div>
+    </div>
+</div>
